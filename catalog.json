@@ -1,0 +1,3167 @@
+{
+  "brand": "cwff",
+  "updated": "2026-10-26",
+  "menus": [
+    {
+      "id": "help",
+      "description": "Open your cwff home and find the right tool"
+    },
+    {
+      "id": "configure",
+      "description": "Choose channels, enable features and customize your server"
+    },
+    {
+      "id": "mod",
+      "description": "Open member moderation, case history and channel tools"
+    },
+    {
+      "id": "tickets",
+      "description": "Open ticket tools, forms and panel customization"
+    },
+    {
+      "id": "queue",
+      "description": "Add an order, view the queue or manage its settings"
+    },
+    {
+      "id": "voice",
+      "description": "Manage your personal voice room"
+    },
+    {
+      "id": "profile",
+      "description": "View avatars, banners and member or server information"
+    },
+    {
+      "id": "community",
+      "description": "Open levels, giveaways, AFK and personal reminders"
+    },
+    {
+      "id": "vouch",
+      "description": "Leave a seller review with a white-star rating and earn loyalty rewards"
+    },
+    {
+      "id": "payment",
+      "description": "Staff payment requests, approved methods and owner payment settings"
+    }
+  ],
+  "groups": [
+    {
+      "id": "payment",
+      "name": "Payments",
+      "icon": "gift",
+      "description": "Approved payment methods, receipt review and customer offers",
+      "command": "payment"
+    },
+    {
+      "id": "server",
+      "name": "Server settings",
+      "icon": "settings",
+      "description": "Channels, logs, protection and bot appearance",
+      "command": "configure"
+    },
+    {
+      "id": "mod",
+      "name": "Moderation",
+      "icon": "shield",
+      "description": "Member actions, case history and channel tools",
+      "command": "mod"
+    },
+    {
+      "id": "tickets",
+      "name": "Tickets",
+      "icon": "ticket",
+      "description": "Ticket studio, support tools and transcripts",
+      "command": "tickets"
+    },
+    {
+      "id": "queue",
+      "name": "Order queue",
+      "icon": "order_customer",
+      "description": "Add orders, track progress and choose a destination",
+      "command": "queue"
+    },
+    {
+      "id": "voice",
+      "name": "Voice rooms",
+      "icon": "voice",
+      "description": "Rename, lock and manage your personal room",
+      "command": "voice"
+    },
+    {
+      "id": "profile",
+      "name": "Profiles & information",
+      "icon": "avatar",
+      "description": "Avatars, banners, member details and server information",
+      "command": "profile"
+    },
+    {
+      "id": "community",
+      "name": "Community",
+      "icon": "sparkle",
+      "description": "Levels, giveaways, AFK and personal reminders",
+      "command": "community"
+    },
+    {
+      "id": "vouches",
+      "name": "Vouches & loyalty",
+      "icon": "rating_star",
+      "description": "Seller reviews, reputation and loyal customer rewards",
+      "command": "vouch"
+    }
+  ],
+  "sections": [
+    {
+      "id": "mod.members",
+      "group": "mod",
+      "name": "Member actions",
+      "icon": "members",
+      "description": "Timeouts, kicks, bans, roles and nicknames",
+      "features": [
+        "timeout",
+        "untimeout",
+        "kick",
+        "ban",
+        "unban",
+        "role",
+        "nickname"
+      ]
+    },
+    {
+      "id": "mod.warnings",
+      "group": "mod",
+      "name": "Warnings & notes",
+      "icon": "logs",
+      "description": "Issue warnings, remove warnings and add staff notes",
+      "features": [
+        "warn",
+        "warnings",
+        "unwarn",
+        "clearwarnings",
+        "modnote"
+      ]
+    },
+    {
+      "id": "mod.history",
+      "group": "mod",
+      "name": "Cases & history",
+      "icon": "clock",
+      "description": "Look up a case or review a member’s history",
+      "features": [
+        "case",
+        "history"
+      ]
+    },
+    {
+      "id": "mod.channels",
+      "group": "mod",
+      "name": "Channel tools",
+      "icon": "lock",
+      "description": "Clear messages, slow chat and control channel access",
+      "features": [
+        "purge",
+        "slowmode",
+        "lock",
+        "unlock"
+      ]
+    },
+    {
+      "id": "server.members",
+      "group": "server",
+      "name": "Members & logging",
+      "icon": "logs",
+      "description": "Logs, member counter, welcomes and automatic roles",
+      "features": [
+        "setup",
+        "logs",
+        "counter",
+        "welcome",
+        "autorole"
+      ]
+    },
+    {
+      "id": "server.safety",
+      "group": "server",
+      "name": "Safety & permissions",
+      "icon": "shield",
+      "description": "Anti-nuke, filters, protections and tool restrictions",
+      "features": [
+        "antinuke",
+        "filter",
+        "protect",
+        "command",
+        "security"
+      ]
+    },
+    {
+      "id": "server.community",
+      "group": "server",
+      "name": "Community settings",
+      "icon": "sparkle",
+      "description": "Level rewards, automatic replies, self-roles and starboard",
+      "features": [
+        "levels",
+        "autoresponder",
+        "selfrole",
+        "starboard"
+      ]
+    },
+    {
+      "id": "server.voice",
+      "group": "server",
+      "name": "Voice setup",
+      "icon": "voice",
+      "description": "Lobby, voice panel and custom voice emojis",
+      "features": [
+        "voicemaster"
+      ]
+    },
+    {
+      "id": "server.appearance",
+      "group": "server",
+      "name": "Appearance & utilities",
+      "icon": "avatar",
+      "description": "Bot profile, custom embeds and server health",
+      "features": [
+        "botprofile",
+        "embed",
+        "settings"
+      ]
+    }
+  ],
+  "tools": [
+    {
+      "id": "setup",
+      "name": "Default log channel",
+      "description": "Send logs to an existing channel; creates no channels",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Members & logging → Default log channel",
+      "actions": [
+        {
+          "id": "setup",
+          "name": "Default log channel",
+          "description": "Send logs to an existing channel; creates no channels",
+          "path": "/configure → Advanced tools → Members & logging → Default log channel",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "A text channel",
+              "required": true,
+              "type": "Channel"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "logs",
+      "name": "Event logs",
+      "description": "Configure your logging channels",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Members & logging → Event logs",
+      "actions": [
+        {
+          "id": "logs.set",
+          "name": "Choose log destination",
+          "description": "Set a destination and enable logging",
+          "path": "/configure → Advanced tools → Members & logging → Event logs → Choose log destination",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "type",
+              "label": "Log category",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "all (default destination)",
+                "members",
+                "avatars",
+                "usernames",
+                "voice",
+                "roles",
+                "messages",
+                "moderation"
+              ]
+            },
+            {
+              "name": "channel",
+              "label": "A text channel",
+              "required": true,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "logs.disable",
+          "name": "Pause logging",
+          "description": "Disable one category or all logs",
+          "path": "/configure → Advanced tools → Members & logging → Event logs → Pause logging",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "type",
+              "label": "Log category",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "all (default destination)",
+                "members",
+                "avatars",
+                "usernames",
+                "voice",
+                "roles",
+                "messages",
+                "moderation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "logs.test",
+          "name": "Send sample logs",
+          "description": "Send a sample to every enabled log category",
+          "path": "/configure → Advanced tools → Members & logging → Event logs → Send sample logs",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "logs.status",
+          "name": "Logging overview",
+          "description": "Show destinations and missing permissions",
+          "path": "/configure → Advanced tools → Members & logging → Event logs → Logging overview",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "counter",
+      "name": "Member counter",
+      "description": "Manage the locked member-count channel",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Members & logging → Member counter",
+      "actions": [
+        {
+          "id": "counter.setup",
+          "name": "Set up",
+          "description": "Use an existing voice channel as the member counter",
+          "path": "/configure → Advanced tools → Members & logging → Member counter → Set up",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Existing voice channel to use",
+              "required": true,
+              "type": "Channel"
+            },
+            {
+              "name": "template",
+              "label": "Use {count}; default is the number only",
+              "required": false,
+              "type": "Text",
+              "maxLength": 85
+            }
+          ]
+        },
+        {
+          "id": "counter.name",
+          "name": "Rename",
+          "description": "Change the counter name at the next scheduled refresh",
+          "path": "/configure → Advanced tools → Members & logging → Member counter → Rename",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "template",
+              "label": "Example: members • {count}",
+              "required": true,
+              "type": "Text",
+              "maxLength": 85
+            }
+          ]
+        },
+        {
+          "id": "counter.disable",
+          "name": "Disable",
+          "description": "Stop updating the counter; keep the channel",
+          "path": "/configure → Advanced tools → Members & logging → Member counter → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "welcome",
+      "name": "Welcome messages",
+      "description": "Configure welcome messages",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Members & logging → Welcome messages",
+      "actions": [
+        {
+          "id": "welcome.set",
+          "name": "Update",
+          "description": "Enable welcome embeds",
+          "path": "/configure → Advanced tools → Members & logging → Welcome messages → Update",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "A text channel",
+              "required": true,
+              "type": "Channel"
+            },
+            {
+              "name": "message",
+              "label": "Placeholders: {user}, {server}, {count}",
+              "required": false,
+              "type": "Text",
+              "maxLength": 1800
+            }
+          ]
+        },
+        {
+          "id": "welcome.disable",
+          "name": "Disable",
+          "description": "Disable welcome messages",
+          "path": "/configure → Advanced tools → Members & logging → Welcome messages → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "autorole",
+      "name": "Automatic member role",
+      "description": "Assign a role after a new member passes membership screening",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Members & logging → Automatic member role",
+      "actions": [
+        {
+          "id": "autorole.set",
+          "name": "Update",
+          "description": "Set a safe, assignable role",
+          "path": "/configure → Advanced tools → Members & logging → Automatic member role → Update",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "role",
+              "label": "Role for new human members",
+              "required": true,
+              "type": "Role"
+            }
+          ]
+        },
+        {
+          "id": "autorole.disable",
+          "name": "Disable",
+          "description": "Disable autorole",
+          "path": "/configure → Advanced tools → Members & logging → Automatic member role → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "name": "Server health & preferences",
+      "description": "Change bot settings",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Appearance & utilities → Server health & preferences",
+      "actions": [
+        {
+          "id": "settings.ignore-bots",
+          "name": "Bot logging preference",
+          "description": "Include or exclude bot accounts in logs",
+          "path": "/configure → Advanced tools → Appearance & utilities → Server health & preferences → Bot logging preference",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "enabled",
+              "label": "True excludes bot accounts (default)",
+              "required": true,
+              "type": "Yes / no"
+            }
+          ]
+        },
+        {
+          "id": "settings.status",
+          "name": "Server health",
+          "description": "Show the server configuration and bot health",
+          "path": "/configure → Advanced tools → Appearance & utilities → Server health & preferences → Server health",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "warn",
+      "name": "Warn a member",
+      "description": "Record a warning with a permanent case number",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Warnings & notes → Warn a member",
+      "actions": [
+        {
+          "id": "warn",
+          "name": "Warn a member",
+          "description": "Record a warning with a permanent case number",
+          "path": "/mod → Warnings & notes → Warn a member",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "The member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "reason",
+              "label": "Reason shown in the moderation log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "warnings",
+      "name": "View warnings",
+      "description": "Show the latest 10 active warnings",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Warnings & notes → View warnings",
+      "actions": [
+        {
+          "id": "warnings",
+          "name": "View warnings",
+          "description": "Show the latest 10 active warnings",
+          "path": "/mod → Warnings & notes → View warnings",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "The member",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unwarn",
+      "name": "Remove a warning",
+      "description": "Mark a warning inactive while keeping the case record",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Warnings & notes → Remove a warning",
+      "actions": [
+        {
+          "id": "unwarn",
+          "name": "Remove a warning",
+          "description": "Mark a warning inactive while keeping the case record",
+          "path": "/mod → Warnings & notes → Remove a warning",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "case",
+              "label": "Warning case number",
+              "required": true,
+              "type": "Whole number",
+              "min": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "timeout",
+      "name": "Timeout a member",
+      "description": "Temporarily prevent a member from interacting",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Member actions → Timeout a member",
+      "actions": [
+        {
+          "id": "timeout",
+          "name": "Timeout a member",
+          "description": "Temporarily prevent a member from interacting",
+          "path": "/mod → Member actions → Timeout a member",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "The member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "minutes",
+              "label": "1 minute to 28 days",
+              "required": true,
+              "type": "Whole number",
+              "min": 1,
+              "max": 40320
+            },
+            {
+              "name": "reason",
+              "label": "Reason shown in the moderation log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "untimeout",
+      "name": "Remove a timeout",
+      "description": "Remove a member timeout",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Member actions → Remove a timeout",
+      "actions": [
+        {
+          "id": "untimeout",
+          "name": "Remove a timeout",
+          "description": "Remove a member timeout",
+          "path": "/mod → Member actions → Remove a timeout",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "The member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "reason",
+              "label": "Reason shown in the moderation log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kick",
+      "name": "Kick a member",
+      "description": "Remove a member from the server",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Member actions → Kick a member",
+      "actions": [
+        {
+          "id": "kick",
+          "name": "Kick a member",
+          "description": "Remove a member from the server",
+          "path": "/mod → Member actions → Kick a member",
+          "access": {
+            "level": "staff",
+            "label": "Kick Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "The member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "reason",
+              "label": "Reason shown in the moderation log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ban",
+      "name": "Ban a member",
+      "description": "Ban a member from the server",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Member actions → Ban a member",
+      "actions": [
+        {
+          "id": "ban",
+          "name": "Ban a member",
+          "description": "Ban a member from the server",
+          "path": "/mod → Member actions → Ban a member",
+          "access": {
+            "level": "staff",
+            "label": "Ban Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "The member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "reason",
+              "label": "Reason shown in the moderation log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "unban",
+      "name": "Unban an account",
+      "description": "Unban an account by its Discord ID",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Member actions → Unban an account",
+      "actions": [
+        {
+          "id": "unban",
+          "name": "Unban an account",
+          "description": "Unban an account by its Discord ID",
+          "path": "/mod → Member actions → Unban an account",
+          "access": {
+            "level": "staff",
+            "label": "Ban Members"
+          },
+          "fields": [
+            {
+              "name": "user-id",
+              "label": "Discord user ID",
+              "required": true,
+              "type": "Text",
+              "maxLength": 22
+            },
+            {
+              "name": "reason",
+              "label": "Reason shown in the moderation log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "purge",
+      "name": "Clear messages",
+      "description": "Delete up to 100 recent messages in this channel",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Channel tools → Clear messages",
+      "actions": [
+        {
+          "id": "purge",
+          "name": "Clear messages",
+          "description": "Delete up to 100 recent messages in this channel",
+          "path": "/mod → Channel tools → Clear messages",
+          "access": {
+            "level": "staff",
+            "label": "Manage Messages"
+          },
+          "fields": [
+            {
+              "name": "amount",
+              "label": "Messages newer than 14 days",
+              "required": true,
+              "type": "Whole number",
+              "min": 1,
+              "max": 100
+            },
+            {
+              "name": "member",
+              "label": "Only delete this member’s messages in the latest 100 messages",
+              "required": false,
+              "type": "Discord member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "slowmode",
+      "name": "Channel slowmode",
+      "description": "Set the slowmode for this text channel",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Channel tools → Channel slowmode",
+      "actions": [
+        {
+          "id": "slowmode",
+          "name": "Channel slowmode",
+          "description": "Set the slowmode for this text channel",
+          "path": "/mod → Channel tools → Channel slowmode",
+          "access": {
+            "level": "staff",
+            "label": "Manage Channels"
+          },
+          "fields": [
+            {
+              "name": "seconds",
+              "label": "0 disables; maximum 21600",
+              "required": true,
+              "type": "Whole number",
+              "min": 0,
+              "max": 21600
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lock",
+      "name": "Lock this channel",
+      "description": "Deny @everyone permission to send in this channel",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Channel tools → Lock this channel",
+      "actions": [
+        {
+          "id": "lock",
+          "name": "Lock this channel",
+          "description": "Deny @everyone permission to send in this channel",
+          "path": "/mod → Channel tools → Lock this channel",
+          "access": {
+            "level": "staff",
+            "label": "Manage Channels"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "unlock",
+      "name": "Unlock this channel",
+      "description": "Restore the @everyone send permission saved by /mod → Channel tools → Lock this channel",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Channel tools → Unlock this channel",
+      "actions": [
+        {
+          "id": "unlock",
+          "name": "Unlock this channel",
+          "description": "Restore the @everyone send permission saved by /mod → Channel tools → Lock this channel",
+          "path": "/mod → Channel tools → Unlock this channel",
+          "access": {
+            "level": "staff",
+            "label": "Manage Channels"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "case",
+      "name": "View a case",
+      "description": "Look up a moderation case",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Cases & history → View a case",
+      "actions": [
+        {
+          "id": "case",
+          "name": "View a case",
+          "description": "Look up a moderation case",
+          "path": "/mod → Cases & history → View a case",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "number",
+              "label": "Case number",
+              "required": true,
+              "type": "Whole number",
+              "min": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "name": "Member history",
+      "description": "Show the latest 10 moderation cases for a member",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Cases & history → Member history",
+      "actions": [
+        {
+          "id": "history",
+          "name": "Member history",
+          "description": "Show the latest 10 moderation cases for a member",
+          "path": "/mod → Cases & history → Member history",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "The member",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "avatar",
+      "name": "View an avatar",
+      "description": "Show a member’s global or server avatar",
+      "group": "profile",
+      "icon": "avatar",
+      "path": "/profile → View an avatar",
+      "actions": [
+        {
+          "id": "avatar",
+          "name": "View an avatar",
+          "description": "Show a member’s global or server avatar",
+          "path": "/profile → View an avatar",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Defaults to you",
+              "required": false,
+              "type": "Discord member"
+            },
+            {
+              "name": "server",
+              "label": "Use their server avatar when available",
+              "required": false,
+              "type": "Yes / no"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "userinfo",
+      "name": "Member information",
+      "description": "Show account and membership information",
+      "group": "profile",
+      "icon": "avatar",
+      "path": "/profile → Member information",
+      "actions": [
+        {
+          "id": "userinfo",
+          "name": "Member information",
+          "description": "Show account and membership information",
+          "path": "/profile → Member information",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Defaults to you",
+              "required": false,
+              "type": "Discord member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "serverinfo",
+      "name": "Server information",
+      "description": "Show the server’s member count, boosts, and creation date",
+      "group": "profile",
+      "icon": "avatar",
+      "path": "/profile → Server information",
+      "actions": [
+        {
+          "id": "serverinfo",
+          "name": "Server information",
+          "description": "Show the server’s member count, boosts, and creation date",
+          "path": "/profile → Server information",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "ping",
+      "name": "Bot connection",
+      "description": "Check gateway latency and uptime",
+      "group": "profile",
+      "icon": "avatar",
+      "path": "/profile → Bot connection",
+      "actions": [
+        {
+          "id": "ping",
+          "name": "Bot connection",
+          "description": "Check gateway latency and uptime",
+          "path": "/profile → Bot connection",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "voicemaster",
+      "name": "Voice lobby & panel",
+      "description": "Configure temporary personal voice channels",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Voice setup → Voice lobby & panel",
+      "actions": [
+        {
+          "id": "voicemaster.setup",
+          "name": "Set up",
+          "description": "Use an existing voice channel as the join-to-create lobby",
+          "path": "/configure → Advanced tools → Voice setup → Voice lobby & panel → Set up",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "lobby",
+              "label": "Existing voice channel to use",
+              "required": true,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "voicemaster.panel",
+          "name": "Post voice panel",
+          "description": "Post the 10-button voice control interface",
+          "path": "/configure → Advanced tools → Voice setup → Voice lobby & panel → Post voice panel",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Panel text channel",
+              "required": true,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "voicemaster.emojis",
+          "name": "Install voice emojis",
+          "description": "Upload the included custom voice emojis (needs Create Expressions)",
+          "path": "/configure → Advanced tools → Voice setup → Voice lobby & panel → Install voice emojis",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "voicemaster.disable",
+          "name": "Disable",
+          "description": "Stop creating new rooms; existing rooms still clean up",
+          "path": "/configure → Advanced tools → Voice setup → Voice lobby & panel → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "voicemaster.status",
+          "name": "View settings",
+          "description": "View temporary voice configuration",
+          "path": "/configure → Advanced tools → Voice setup → Voice lobby & panel → View settings",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "voice",
+      "name": "Your voice room",
+      "description": "Control your temporary voice room",
+      "group": "voice",
+      "icon": "voice",
+      "path": "/voice",
+      "actions": [
+        {
+          "id": "voice.name",
+          "name": "Rename",
+          "description": "Rename your room",
+          "path": "/voice → Rename",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": [
+            {
+              "name": "name",
+              "label": "Room name",
+              "required": true,
+              "type": "Text",
+              "maxLength": 80
+            }
+          ]
+        },
+        {
+          "id": "voice.limit",
+          "name": "Member limit",
+          "description": "Set the maximum members",
+          "path": "/voice → Member limit",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": [
+            {
+              "name": "number",
+              "label": "0 is unlimited",
+              "required": true,
+              "type": "Whole number",
+              "min": 0,
+              "max": 99
+            }
+          ]
+        },
+        {
+          "id": "voice.lock",
+          "name": "Lock room",
+          "description": "Stop new members from connecting",
+          "path": "/voice → Lock room",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": []
+        },
+        {
+          "id": "voice.unlock",
+          "name": "Unlock room",
+          "description": "Allow new members to connect",
+          "path": "/voice → Unlock room",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": []
+        },
+        {
+          "id": "voice.ghost",
+          "name": "Hide room",
+          "description": "Hide your room from @everyone",
+          "path": "/voice → Hide room",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": []
+        },
+        {
+          "id": "voice.reveal",
+          "name": "Show room",
+          "description": "Show your room to @everyone",
+          "path": "/voice → Show room",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": []
+        },
+        {
+          "id": "voice.info",
+          "name": "Room information",
+          "description": "Show your current room’s details",
+          "path": "/voice → Room information",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": []
+        },
+        {
+          "id": "voice.permit",
+          "name": "Allow a member",
+          "description": "Allow a member to connect to your room",
+          "path": "/voice → Allow a member",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "A server member",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        },
+        {
+          "id": "voice.reject",
+          "name": "Block a member",
+          "description": "Deny a member access and disconnect them if present",
+          "path": "/voice → Block a member",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "A server member",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        },
+        {
+          "id": "voice.transfer",
+          "name": "Transfer ownership",
+          "description": "Transfer ownership to a human member in your room",
+          "path": "/voice → Transfer ownership",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "A server member",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        },
+        {
+          "id": "voice.claim",
+          "name": "Claim",
+          "description": "Claim the room if its owner is absent",
+          "path": "/voice → Claim",
+          "access": {
+            "level": "member",
+            "label": "Voice room owner"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "levels",
+      "name": "Level settings & rewards",
+      "description": "Configure activity levels and reward roles",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Community settings → Level settings & rewards",
+      "actions": [
+        {
+          "id": "levels.enable",
+          "name": "Enable",
+          "description": "Track message activity with a 60-second XP cooldown",
+          "path": "/configure → Advanced tools → Community settings → Level settings & rewards → Enable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Optional level-up announcement channel",
+              "required": false,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "levels.disable",
+          "name": "Disable",
+          "description": "Stop awarding XP, keeping existing progress",
+          "path": "/configure → Advanced tools → Community settings → Level settings & rewards → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "levels.reward",
+          "name": "Add level reward",
+          "description": "Set a role awarded at a level",
+          "path": "/configure → Advanced tools → Community settings → Level settings & rewards → Add level reward",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "level",
+              "label": "Level to earn the role",
+              "required": true,
+              "type": "Whole number",
+              "min": 1,
+              "max": 100
+            },
+            {
+              "name": "role",
+              "label": "A regular, non-staff member role",
+              "required": true,
+              "type": "Role"
+            }
+          ]
+        },
+        {
+          "id": "levels.remove-reward",
+          "name": "Remove reward",
+          "description": "Remove a level reward configuration",
+          "path": "/configure → Advanced tools → Community settings → Level settings & rewards → Remove reward",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "level",
+              "label": "Level reward to remove",
+              "required": true,
+              "type": "Whole number",
+              "min": 1
+            }
+          ]
+        },
+        {
+          "id": "levels.status",
+          "name": "View settings",
+          "description": "Show leveling settings and reward roles",
+          "path": "/configure → Advanced tools → Community settings → Level settings & rewards → View settings",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "rank",
+      "name": "Member rank",
+      "description": "Show your activity level",
+      "group": "community",
+      "icon": "sparkle",
+      "path": "/community → Member rank",
+      "actions": [
+        {
+          "id": "rank",
+          "name": "Member rank",
+          "description": "Show your activity level",
+          "path": "/community → Member rank",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Defaults to you",
+              "required": false,
+              "type": "Discord member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leaderboard",
+      "name": "Leaderboard",
+      "description": "Show the ten highest activity levels",
+      "group": "community",
+      "icon": "sparkle",
+      "path": "/community → Leaderboard",
+      "actions": [
+        {
+          "id": "leaderboard",
+          "name": "Leaderboard",
+          "description": "Show the ten highest activity levels",
+          "path": "/community → Leaderboard",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "autoresponder",
+      "name": "Automatic replies",
+      "description": "Configure exact-match automatic replies",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Community settings → Automatic replies",
+      "actions": [
+        {
+          "id": "autoresponder.add",
+          "name": "Add",
+          "description": "Add or replace a trigger (up to 25)",
+          "path": "/configure → Advanced tools → Community settings → Automatic replies → Add",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "trigger",
+              "label": "Exact text, case insensitive",
+              "required": true,
+              "type": "Text",
+              "maxLength": 100
+            },
+            {
+              "name": "response",
+              "label": "Reply text; supports {user} and {server}",
+              "required": true,
+              "type": "Text",
+              "maxLength": 1500
+            },
+            {
+              "name": "channel",
+              "label": "Restrict to a text channel",
+              "required": false,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "autoresponder.remove",
+          "name": "Remove",
+          "description": "Remove a trigger",
+          "path": "/configure → Advanced tools → Community settings → Automatic replies → Remove",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "trigger",
+              "label": "Trigger to remove",
+              "required": true,
+              "type": "Text",
+              "maxLength": 100
+            }
+          ]
+        },
+        {
+          "id": "autoresponder.list",
+          "name": "View list",
+          "description": "Show configured triggers",
+          "path": "/configure → Advanced tools → Community settings → Automatic replies → View list",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "filter",
+      "name": "Chat filters",
+      "description": "Configure chat filters; staff are exempt",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Safety & permissions → Chat filters",
+      "actions": [
+        {
+          "id": "filter.set",
+          "name": "Update",
+          "description": "Enable or disable a filter",
+          "path": "/configure → Advanced tools → Safety & permissions → Chat filters → Update",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "type",
+              "label": "Filter type",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "invites",
+                "links",
+                "mentions",
+                "caps",
+                "spam"
+              ]
+            },
+            {
+              "name": "enabled",
+              "label": "Enable this filter",
+              "required": true,
+              "type": "Yes / no"
+            }
+          ]
+        },
+        {
+          "id": "filter.word-add",
+          "name": "Block a word",
+          "description": "Block a literal word or phrase",
+          "path": "/configure → Advanced tools → Safety & permissions → Chat filters → Block a word",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "word",
+              "label": "Literal text, case insensitive; up to 50 entries",
+              "required": true,
+              "type": "Text",
+              "maxLength": 100
+            }
+          ]
+        },
+        {
+          "id": "filter.word-remove",
+          "name": "Unblock a word",
+          "description": "Unblock a literal word or phrase",
+          "path": "/configure → Advanced tools → Safety & permissions → Chat filters → Unblock a word",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "word",
+              "label": "Entry to remove",
+              "required": true,
+              "type": "Text",
+              "maxLength": 100
+            }
+          ]
+        },
+        {
+          "id": "filter.status",
+          "name": "View settings",
+          "description": "Show filter settings and thresholds",
+          "path": "/configure → Advanced tools → Safety & permissions → Chat filters → View settings",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "afk",
+      "name": "Set your away status",
+      "description": "Mark yourself away; chatting clears your status",
+      "group": "community",
+      "icon": "sparkle",
+      "path": "/community → Set your away status",
+      "actions": [
+        {
+          "id": "afk",
+          "name": "Set your away status",
+          "description": "Mark yourself away; chatting clears your status",
+          "path": "/community → Set your away status",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "reason",
+              "label": "Why you are away",
+              "required": false,
+              "type": "Text",
+              "maxLength": 200
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "selfrole",
+      "name": "Self-role panels",
+      "description": "Post a button that toggles a safe member role",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Community settings → Self-role panels",
+      "actions": [
+        {
+          "id": "selfrole.post",
+          "name": "Post panel",
+          "description": "Post a self-role button",
+          "path": "/configure → Advanced tools → Community settings → Self-role panels → Post panel",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Destination text channel",
+              "required": true,
+              "type": "Channel"
+            },
+            {
+              "name": "role",
+              "label": "A regular, non-staff member role",
+              "required": true,
+              "type": "Role"
+            },
+            {
+              "name": "label",
+              "label": "Button label",
+              "required": false,
+              "type": "Text",
+              "maxLength": 60
+            }
+          ]
+        },
+        {
+          "id": "selfrole.remove",
+          "name": "Remove",
+          "description": "Disable a panel and remove its button",
+          "path": "/configure → Advanced tools → Community settings → Self-role panels → Remove",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "message-id",
+              "label": "Message ID of the panel",
+              "required": true,
+              "type": "Text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "starboard",
+      "name": "Starboard",
+      "description": "Feature public messages that receive enough ⭐ reactions",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Community settings → Starboard",
+      "actions": [
+        {
+          "id": "starboard.setup",
+          "name": "Set up",
+          "description": "Enable the starboard",
+          "path": "/configure → Advanced tools → Community settings → Starboard → Set up",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Destination text channel",
+              "required": true,
+              "type": "Channel"
+            },
+            {
+              "name": "threshold",
+              "label": "Qualifying stars needed; default 3",
+              "required": false,
+              "type": "Whole number",
+              "min": 1,
+              "max": 20
+            }
+          ]
+        },
+        {
+          "id": "starboard.disable",
+          "name": "Disable",
+          "description": "Stop featuring messages; keep existing posts",
+          "path": "/configure → Advanced tools → Community settings → Starboard → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "starboard.status",
+          "name": "View settings",
+          "description": "Show starboard configuration",
+          "path": "/configure → Advanced tools → Community settings → Starboard → View settings",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "giveaway",
+      "name": "Giveaways",
+      "description": "Host persistent giveaways with entry buttons",
+      "group": "community",
+      "icon": "sparkle",
+      "path": "/community → Giveaways",
+      "actions": [
+        {
+          "id": "giveaway.start",
+          "name": "Start",
+          "description": "Start a giveaway",
+          "path": "/community → Giveaways → Start",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "prize",
+              "label": "What the winner receives",
+              "required": true,
+              "type": "Text",
+              "maxLength": 200
+            },
+            {
+              "name": "minutes",
+              "label": "Duration: 1 minute to 30 days",
+              "required": true,
+              "type": "Whole number",
+              "min": 1,
+              "max": 43200
+            },
+            {
+              "name": "channel",
+              "label": "Optional; defaults to the channel chosen in /configure",
+              "required": false,
+              "type": "Channel"
+            },
+            {
+              "name": "winners",
+              "label": "1–10 winners; default 1",
+              "required": false,
+              "type": "Whole number",
+              "min": 1,
+              "max": 10
+            }
+          ]
+        },
+        {
+          "id": "giveaway.end",
+          "name": "End",
+          "description": "End a giveaway early and select winners",
+          "path": "/community → Giveaways → End",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "message-id",
+              "label": "Giveaway message ID",
+              "required": true,
+              "type": "Text"
+            }
+          ]
+        },
+        {
+          "id": "giveaway.list",
+          "name": "View list",
+          "description": "Show running giveaways",
+          "path": "/community → Giveaways → View list",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "queue",
+      "name": "Order queue",
+      "description": "Staff order cards and status tracking",
+      "group": "queue",
+      "icon": "order_customer",
+      "path": "/queue",
+      "actions": [
+        {
+          "id": "queue.setup",
+          "name": "Queue channel & staff",
+          "description": "Managers: choose the only channel where order cards are posted",
+          "path": "/queue → Queue channel & staff",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Existing queue text channel",
+              "required": true,
+              "type": "Channel"
+            },
+            {
+              "name": "staff-role",
+              "label": "Additional role allowed to add and update orders",
+              "required": false,
+              "type": "Role"
+            }
+          ]
+        },
+        {
+          "id": "queue.add",
+          "name": "Add order",
+          "description": "Staff: select the customer and fill out their order",
+          "path": "/queue → Add order",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": [
+            {
+              "name": "customer",
+              "label": "Customer’s Discord account",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "payment",
+              "label": "Payment method",
+              "required": true,
+              "type": "Text",
+              "maxLength": 100
+            },
+            {
+              "name": "fastpass",
+              "label": "Fastpass",
+              "required": true,
+              "type": "Yes / no"
+            },
+            {
+              "name": "details",
+              "label": "Ticket link or order details",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            },
+            {
+              "name": "product",
+              "label": "Product name · match a selected booster product",
+              "required": false,
+              "type": "Text",
+              "maxLength": 100
+            }
+          ]
+        },
+        {
+          "id": "queue.list",
+          "name": "Active work list",
+          "description": "Staff: view active orders, with fastpass orders first",
+          "path": "/queue → Active work list",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": []
+        },
+        {
+          "id": "queue.board",
+          "name": "Post live work list",
+          "description": "Managers: post a live order work list in a channel you choose",
+          "path": "/queue → Post live work list",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Existing work list text channel",
+              "required": true,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "queue.board-disable",
+          "name": "Pause work list",
+          "description": "Managers: pause the live work list",
+          "path": "/queue → Pause work list",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "queue.care-new",
+          "name": "Open refund / dispute",
+          "description": "Staff: open a refund or dispute record",
+          "path": "/queue → Open refund / dispute",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": [
+            {
+              "name": "order",
+              "label": "Order number",
+              "required": true,
+              "type": "Whole number",
+              "min": 1
+            },
+            {
+              "name": "type",
+              "label": "Case type",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "Refund",
+                "Dispute"
+              ]
+            },
+            {
+              "name": "reason",
+              "label": "Reason / issue",
+              "required": true,
+              "type": "Text",
+              "maxLength": 1000
+            },
+            {
+              "name": "amount",
+              "label": "Requested amount and currency",
+              "required": false,
+              "type": "Text",
+              "maxLength": 50
+            }
+          ]
+        },
+        {
+          "id": "queue.care-list",
+          "name": "Refunds & disputes",
+          "description": "Staff: review refunds and disputes",
+          "path": "/queue → Refunds & disputes",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": []
+        },
+        {
+          "id": "queue.status",
+          "name": "Queue settings",
+          "description": "Staff: view order queue settings",
+          "path": "/queue → Queue settings",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": []
+        },
+        {
+          "id": "queue.disable",
+          "name": "Disable",
+          "description": "Managers: pause new orders and keep existing cards",
+          "path": "/queue → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "tickets",
+      "name": "Ticket studio & settings",
+      "description": "Configure private support tickets",
+      "group": "tickets",
+      "icon": "ticket",
+      "path": "/tickets → Ticket studio & settings",
+      "actions": [
+        {
+          "id": "tickets.setup",
+          "name": "Set up",
+          "description": "Post a persistent ticket creation panel",
+          "path": "/tickets → Ticket studio & settings → Set up",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Panel destination",
+              "required": true,
+              "type": "Channel"
+            },
+            {
+              "name": "support-role",
+              "label": "Staff role allowed into tickets",
+              "required": true,
+              "type": "Role"
+            },
+            {
+              "name": "category",
+              "label": "Optional ticket category",
+              "required": false,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "tickets.disable",
+          "name": "Disable",
+          "description": "Disable new tickets; preserve existing tickets",
+          "path": "/tickets → Ticket studio & settings → Disable",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "tickets.customize",
+          "name": "Open ticket studio",
+          "description": "Design ticket sections, questions, routing and panel appearance",
+          "path": "/tickets → Ticket studio & settings → Open ticket studio",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "tickets.refresh",
+          "name": "Refresh posted panels",
+          "description": "Apply your design to existing ticket panels",
+          "path": "/tickets → Ticket studio & settings → Refresh posted panels",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "tickets.status",
+          "name": "View settings",
+          "description": "View ticket configuration",
+          "path": "/tickets → Ticket studio & settings → View settings",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "botprofile",
+      "name": "Bot appearance",
+      "description": "Customize the bot avatar and banner only in this server",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Appearance & utilities → Bot appearance",
+      "actions": [
+        {
+          "id": "botprofile.avatar",
+          "name": "avatar",
+          "description": "Set this server’s bot avatar",
+          "path": "/configure → Advanced tools → Appearance & utilities → Bot appearance → avatar",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "image",
+              "label": "PNG, JPEG, GIF or WebP under 8 MiB",
+              "required": true,
+              "type": "File upload"
+            }
+          ]
+        },
+        {
+          "id": "botprofile.banner",
+          "name": "banner",
+          "description": "Set this server’s bot profile banner",
+          "path": "/configure → Advanced tools → Appearance & utilities → Bot appearance → banner",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "image",
+              "label": "PNG, JPEG, GIF or WebP under 8 MiB",
+              "required": true,
+              "type": "File upload"
+            }
+          ]
+        },
+        {
+          "id": "botprofile.show",
+          "name": "View profile",
+          "description": "View the bot’s server profile",
+          "path": "/configure → Advanced tools → Appearance & utilities → Bot appearance → View profile",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        },
+        {
+          "id": "botprofile.reset",
+          "name": "Reset appearance",
+          "description": "Use the global avatar or banner again in this server",
+          "path": "/configure → Advanced tools → Appearance & utilities → Bot appearance → Reset appearance",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": [
+            {
+              "name": "target",
+              "label": "What to reset",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "Avatar",
+                "Banner",
+                "Both"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "name": "Manage this ticket",
+      "description": "Manage this support ticket",
+      "group": "tickets",
+      "icon": "ticket",
+      "path": "/tickets → Manage this ticket",
+      "actions": [
+        {
+          "id": "ticket.claim",
+          "name": "Claim",
+          "description": "Support staff: claim this ticket",
+          "path": "/tickets → Manage this ticket → Claim",
+          "access": {
+            "level": "staff",
+            "label": "Ticket support staff"
+          },
+          "fields": []
+        },
+        {
+          "id": "ticket.close",
+          "name": "Close ticket",
+          "description": "Archive this ticket and stop further replies",
+          "path": "/tickets → Manage this ticket → Close ticket",
+          "access": {
+            "level": "staff",
+            "label": "Ticket owner / support staff"
+          },
+          "fields": []
+        },
+        {
+          "id": "ticket.transcript",
+          "name": "Download transcript",
+          "description": "Download up to 500 recent messages as plain text",
+          "path": "/tickets → Manage this ticket → Download transcript",
+          "access": {
+            "level": "staff",
+            "label": "Ticket owner / support staff"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "remind",
+      "name": "Create a reminder",
+      "description": "Set a personal reminder delivered by DM",
+      "group": "community",
+      "icon": "sparkle",
+      "path": "/community → Create a reminder",
+      "actions": [
+        {
+          "id": "remind",
+          "name": "Create a reminder",
+          "description": "Set a personal reminder delivered by DM",
+          "path": "/community → Create a reminder",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "in",
+              "label": "Examples: 30m, 2h, 1d 4h (1 minute–30 days)",
+              "required": true,
+              "type": "Text",
+              "maxLength": 50
+            },
+            {
+              "name": "message",
+              "label": "Your reminder text",
+              "required": true,
+              "type": "Text",
+              "maxLength": 1000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "reminders",
+      "name": "Your reminders",
+      "description": "List your pending and failed reminders",
+      "group": "community",
+      "icon": "sparkle",
+      "path": "/community → Your reminders",
+      "actions": [
+        {
+          "id": "reminders",
+          "name": "Your reminders",
+          "description": "List your pending and failed reminders",
+          "path": "/community → Your reminders",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "cancelreminder",
+      "name": "Cancel a reminder",
+      "description": "Cancel one of your reminders",
+      "group": "community",
+      "icon": "sparkle",
+      "path": "/community → Cancel a reminder",
+      "actions": [
+        {
+          "id": "cancelreminder",
+          "name": "Cancel a reminder",
+          "description": "Cancel one of your reminders",
+          "path": "/community → Cancel a reminder",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "id",
+              "label": "Reminder ID from /community → Your reminders",
+              "required": true,
+              "type": "Text"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "embed",
+      "name": "Post an embed",
+      "description": "Post a custom embed in a channel you can moderate",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Appearance & utilities → Post an embed",
+      "actions": [
+        {
+          "id": "embed",
+          "name": "Post an embed",
+          "description": "Post a custom embed in a channel you can moderate",
+          "path": "/configure → Advanced tools → Appearance & utilities → Post an embed",
+          "access": {
+            "level": "staff",
+            "label": "Manage Messages"
+          },
+          "fields": [
+            {
+              "name": "channel",
+              "label": "Destination text channel",
+              "required": true,
+              "type": "Channel"
+            },
+            {
+              "name": "title",
+              "label": "Embed title",
+              "required": true,
+              "type": "Text",
+              "maxLength": 256
+            },
+            {
+              "name": "description",
+              "label": "Embed body",
+              "required": true,
+              "type": "Text",
+              "maxLength": 3500
+            },
+            {
+              "name": "color",
+              "label": "Optional hex color, e.g. 7797ff",
+              "required": false,
+              "type": "Text",
+              "maxLength": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "banner",
+      "name": "View a banner",
+      "description": "Show a member’s global profile banner",
+      "group": "profile",
+      "icon": "avatar",
+      "path": "/profile → View a banner",
+      "actions": [
+        {
+          "id": "banner",
+          "name": "View a banner",
+          "description": "Show a member’s global profile banner",
+          "path": "/profile → View a banner",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Defaults to you",
+              "required": false,
+              "type": "Discord member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "protect",
+      "name": "Protected members & roles",
+      "description": "Protect members or roles from this bot’s moderation",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Safety & permissions → Protected members & roles",
+      "actions": [
+        {
+          "id": "protect.member",
+          "name": "Toggle member protection",
+          "description": "Toggle protection for one member",
+          "path": "/configure → Advanced tools → Safety & permissions → Protected members & roles → Toggle member protection",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Member to protect or unprotect",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        },
+        {
+          "id": "protect.role",
+          "name": "Toggle role protection",
+          "description": "Toggle protection for everyone with a role",
+          "path": "/configure → Advanced tools → Safety & permissions → Protected members & roles → Toggle role protection",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": [
+            {
+              "name": "role",
+              "label": "Protected role",
+              "required": true,
+              "type": "Role"
+            }
+          ]
+        },
+        {
+          "id": "protect.list",
+          "name": "View list",
+          "description": "Show protected members and roles",
+          "path": "/configure → Advanced tools → Safety & permissions → Protected members & roles → View list",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "command",
+      "name": "Tool restrictions",
+      "description": "Disable bot commands without changing Discord roles",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Safety & permissions → Tool restrictions",
+      "actions": [
+        {
+          "id": "command.disable",
+          "name": "Disable",
+          "description": "Disable a command globally or in one channel",
+          "path": "/configure → Advanced tools → Safety & permissions → Tool restrictions → Disable",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": [
+            {
+              "name": "name",
+              "label": "Command menu",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "/help",
+                "/configure",
+                "/mod",
+                "/tickets",
+                "/queue",
+                "/voice",
+                "/profile",
+                "/community",
+                "/vouch",
+                "/payment"
+              ],
+              "maxLength": 32
+            },
+            {
+              "name": "channel",
+              "label": "Optional channel scope",
+              "required": false,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "command.enable",
+          "name": "Enable",
+          "description": "Lift a global or channel command restriction",
+          "path": "/configure → Advanced tools → Safety & permissions → Tool restrictions → Enable",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": [
+            {
+              "name": "name",
+              "label": "Command menu",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "/help",
+                "/configure",
+                "/mod",
+                "/tickets",
+                "/queue",
+                "/voice",
+                "/profile",
+                "/community",
+                "/vouch",
+                "/payment"
+              ],
+              "maxLength": 32
+            },
+            {
+              "name": "channel",
+              "label": "Optional channel scope",
+              "required": false,
+              "type": "Channel"
+            }
+          ]
+        },
+        {
+          "id": "command.list",
+          "name": "View list",
+          "description": "Show disabled command scopes",
+          "path": "/configure → Advanced tools → Safety & permissions → Tool restrictions → View list",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security audit",
+      "description": "Read-only server configuration audit",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Safety & permissions → Security audit",
+      "actions": [
+        {
+          "id": "security.audit",
+          "name": "Run audit",
+          "description": "Review role permissions, verification, and moderation setup",
+          "path": "/configure → Advanced tools → Safety & permissions → Security audit → Run audit",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "antinuke",
+      "name": "Anti-nuke protection",
+      "description": "Owner-only anti-nuke monitoring and response settings",
+      "group": "server",
+      "icon": "settings",
+      "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection",
+      "actions": [
+        {
+          "id": "antinuke.status",
+          "name": "View settings",
+          "description": "View anti-nuke configuration and requirements",
+          "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection → View settings",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": []
+        },
+        {
+          "id": "antinuke.enable",
+          "name": "Enable",
+          "description": "Enable the configured modules; needs an alert channel",
+          "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection → Enable",
+          "access": {
+            "level": "owner",
+            "label": "Server owner"
+          },
+          "fields": []
+        },
+        {
+          "id": "antinuke.disable",
+          "name": "Disable",
+          "description": "Disable anti-nuke monitoring",
+          "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection → Disable",
+          "access": {
+            "level": "owner",
+            "label": "Server owner"
+          },
+          "fields": []
+        },
+        {
+          "id": "antinuke.action",
+          "name": "Response action",
+          "description": "Choose the response after a threshold is reached",
+          "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection → Response action",
+          "access": {
+            "level": "owner",
+            "label": "Server owner"
+          },
+          "fields": [
+            {
+              "name": "mode",
+              "label": "Response mode",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "Alert only",
+                "Remove dangerous editable roles",
+                "Ban the actor"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "antinuke.module",
+          "name": "Configure a module",
+          "description": "Set a module, threshold, and rolling time window",
+          "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection → Configure a module",
+          "access": {
+            "level": "owner",
+            "label": "Server owner"
+          },
+          "fields": [
+            {
+              "name": "type",
+              "label": "Monitored action",
+              "required": true,
+              "type": "Text",
+              "choices": [
+                "channel-delete",
+                "role-delete",
+                "mass-ban",
+                "mass-kick",
+                "webhook-create",
+                "bot-add",
+                "dangerous-role"
+              ]
+            },
+            {
+              "name": "enabled",
+              "label": "Monitor this action",
+              "required": true,
+              "type": "Yes / no"
+            },
+            {
+              "name": "threshold",
+              "label": "1–20 actions; default 3",
+              "required": false,
+              "type": "Whole number",
+              "min": 1,
+              "max": 20
+            },
+            {
+              "name": "seconds",
+              "label": "Rolling window: 5–120 seconds; default 15",
+              "required": false,
+              "type": "Whole number",
+              "min": 5,
+              "max": 120
+            }
+          ]
+        },
+        {
+          "id": "antinuke.trust",
+          "name": "Trust a member",
+          "description": "Exempt a trusted member or bot",
+          "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection → Trust a member",
+          "access": {
+            "level": "owner",
+            "label": "Server owner"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Server member",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        },
+        {
+          "id": "antinuke.untrust",
+          "name": "Remove trust",
+          "description": "Remove a member exemption",
+          "path": "/configure → Advanced tools → Safety & permissions → Anti-nuke protection → Remove trust",
+          "access": {
+            "level": "owner",
+            "label": "Server owner"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Server member",
+              "required": true,
+              "type": "Discord member"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "modnote",
+      "name": "Add a staff note",
+      "description": "Add a staff note to a member’s moderation history",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Warnings & notes → Add a staff note",
+      "actions": [
+        {
+          "id": "modnote",
+          "name": "Add a staff note",
+          "description": "Add a staff note to a member’s moderation history",
+          "path": "/mod → Warnings & notes → Add a staff note",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Server member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "reason",
+              "label": "Reason for the case log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "clearwarnings",
+      "name": "Clear member warnings",
+      "description": "Mark all member warnings inactive; keep their records",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Warnings & notes → Clear member warnings",
+      "actions": [
+        {
+          "id": "clearwarnings",
+          "name": "Clear member warnings",
+          "description": "Mark all member warnings inactive; keep their records",
+          "path": "/mod → Warnings & notes → Clear member warnings",
+          "access": {
+            "level": "staff",
+            "label": "Moderate Members"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Server member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "reason",
+              "label": "Reason for the case log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "role",
+      "name": "Member roles",
+      "description": "Give or remove safe member roles",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Member actions → Member roles",
+      "actions": [
+        {
+          "id": "role.add",
+          "name": "Add",
+          "description": "Assign a safe, non-staff role",
+          "path": "/mod → Member actions → Member roles → Add",
+          "access": {
+            "level": "staff",
+            "label": "Manage Roles"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Server member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "role",
+              "label": "Safe member role",
+              "required": true,
+              "type": "Role"
+            },
+            {
+              "name": "reason",
+              "label": "Reason for the case log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        },
+        {
+          "id": "role.remove",
+          "name": "Remove",
+          "description": "Remove a safe, non-staff role",
+          "path": "/mod → Member actions → Member roles → Remove",
+          "access": {
+            "level": "staff",
+            "label": "Manage Roles"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Server member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "role",
+              "label": "Safe member role",
+              "required": true,
+              "type": "Role"
+            },
+            {
+              "name": "reason",
+              "label": "Reason for the case log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nickname",
+      "name": "Change a nickname",
+      "description": "Set or clear a member nickname",
+      "group": "mod",
+      "icon": "shield",
+      "path": "/mod → Member actions → Change a nickname",
+      "actions": [
+        {
+          "id": "nickname",
+          "name": "Change a nickname",
+          "description": "Set or clear a member nickname",
+          "path": "/mod → Member actions → Change a nickname",
+          "access": {
+            "level": "staff",
+            "label": "Required Discord permission"
+          },
+          "fields": [
+            {
+              "name": "member",
+              "label": "Server member",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "name",
+              "label": "New nickname, or reset to clear it",
+              "required": true,
+              "type": "Text",
+              "maxLength": 32
+            },
+            {
+              "name": "reason",
+              "label": "Reason for the case log",
+              "required": true,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vouch",
+      "name": "Leave a vouch",
+      "description": "Leave a seller review and earn loyalty rewards",
+      "group": "vouches",
+      "icon": "rating_star",
+      "path": "/vouch",
+      "actions": [
+        {
+          "id": "vouch",
+          "name": "Leave a vouch",
+          "description": "Leave a seller review and earn loyalty rewards",
+          "path": "/vouch",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "product",
+              "label": "What you purchased",
+              "required": true,
+              "type": "Text",
+              "maxLength": 120
+            },
+            {
+              "name": "seller",
+              "label": "The member you purchased from",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "stars",
+              "label": "Your honest rating, from 1 to 5 stars",
+              "required": true,
+              "type": "Whole number",
+              "choices": [
+                "★☆☆☆☆ · 1 / 5",
+                "★★☆☆☆ · 2 / 5",
+                "★★★☆☆ · 3 / 5",
+                "★★★★☆ · 4 / 5",
+                "★★★★★ · 5 / 5"
+              ]
+            },
+            {
+              "name": "note",
+              "label": "Tell us about your experience",
+              "required": true,
+              "type": "Text",
+              "maxLength": 1000
+            },
+            {
+              "name": "proof",
+              "label": "Optional purchase image: PNG, JPEG, GIF or WebP, under 8 MiB",
+              "required": false,
+              "type": "File upload"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vouches",
+      "name": "Reputation & loyalty",
+      "description": "Seller ratings, loyalty progress and vouch management",
+      "group": "vouches",
+      "icon": "rating_star",
+      "path": "/help → Vouches & loyalty → Reputation & loyalty",
+      "actions": [
+        {
+          "id": "vouches.profile",
+          "name": "Seller profile",
+          "description": "View a seller’s ratings and your loyalty progress",
+          "path": "/help → Vouches & loyalty → Reputation & loyalty → Seller profile",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "seller",
+              "label": "Seller to look up; defaults to you",
+              "required": false,
+              "type": "Discord member"
+            }
+          ]
+        },
+        {
+          "id": "vouches.recent",
+          "name": "Recent vouches",
+          "description": "Browse recent vouches",
+          "path": "/help → Vouches & loyalty → Reputation & loyalty → Recent vouches",
+          "access": {
+            "level": "member",
+            "label": "Server member"
+          },
+          "fields": [
+            {
+              "name": "seller",
+              "label": "Optional seller filter",
+              "required": false,
+              "type": "Discord member"
+            }
+          ]
+        },
+        {
+          "id": "vouches.manage",
+          "name": "Vouch studio",
+          "description": "Staff: configure destinations, loyalty and recovery",
+          "path": "/help → Vouches & loyalty → Reputation & loyalty → Vouch studio",
+          "access": {
+            "level": "manager",
+            "label": "Manage Server"
+          },
+          "fields": []
+        }
+      ]
+    },
+    {
+      "id": "payment",
+      "name": "Payments & customer offers",
+      "description": "Staff payment requests and owner-configured payment methods",
+      "group": "payment",
+      "icon": "gift",
+      "path": "/payment",
+      "actions": [
+        {
+          "id": "payment.request",
+          "name": "New payment request",
+          "description": "Staff: send a buyer a payment-method dropdown in this channel",
+          "path": "/payment → New payment request",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": [
+            {
+              "name": "buyer",
+              "label": "Buyer who can choose a method and upload proof",
+              "required": true,
+              "type": "Discord member"
+            },
+            {
+              "name": "amount",
+              "label": "Price before loyalty discount, for example 25.00",
+              "required": true,
+              "type": "Text",
+              "maxLength": 16
+            },
+            {
+              "name": "product",
+              "label": "Product name; match an owner-selected booster product for its offer",
+              "required": true,
+              "type": "Text",
+              "maxLength": 100
+            },
+            {
+              "name": "currency",
+              "label": "Currency; defaults to the owner’s chosen currency",
+              "required": false,
+              "type": "Text",
+              "choices": [
+                "USD",
+                "EUR",
+                "GBP",
+                "CAD",
+                "AUD",
+                "NZD"
+              ]
+            },
+            {
+              "name": "details",
+              "label": "Order or product details",
+              "required": false,
+              "type": "Text",
+              "maxLength": 500
+            }
+          ]
+        },
+        {
+          "id": "payment.list",
+          "name": "Recent payment requests",
+          "description": "Staff: view recent payment requests in this channel",
+          "path": "/payment → Recent payment requests",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": []
+        },
+        {
+          "id": "payment.lookup",
+          "name": "Find payment / receipt",
+          "description": "Staff: find a saved payment or receipt by its cwff reference",
+          "path": "/payment → Find payment / receipt",
+          "access": {
+            "level": "staff",
+            "label": "Approved staff"
+          },
+          "fields": [
+            {
+              "name": "reference",
+              "label": "Payment reference, for example cwff-a1b2c3d4",
+              "required": true,
+              "type": "Text",
+              "maxLength": 40
+            }
+          ]
+        },
+        {
+          "id": "payment.manage",
+          "name": "Payment studio",
+          "description": "Owner/co-owner: customize payment methods, instructions and offers",
+          "path": "/payment → Payment studio",
+          "access": {
+            "level": "owner",
+            "label": "Owner / trusted payment co-owner"
+          },
+          "fields": []
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "menus": 10,
+    "tools": 55,
+    "actions": 124
+  }
+}
